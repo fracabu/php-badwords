@@ -7,7 +7,7 @@ magnam dolorem minus ipsum ducimus ullam voluptate ab repudiandae, atque ipsa so
 $paragrafoLenght =strlen($paragrafo);
 $parolaX =key_exists("parola", $_GET) ? $_GET ["parola"] : "";
 $paragrafoCensurato = str_ireplace($parolaX,"***", $paragrafo);
-$paragrafoCensuratoLength = strlen("paragrafoCensurato");
+$paragrafoCensuratoLength = strlen($paragrafoCensurato);
 
 
 ?>
@@ -28,6 +28,10 @@ $paragrafoCensuratoLength = strlen("paragrafoCensurato");
 <strong>lunghezza paragrafo: <? echo $paragrafoLenght?></strong>
 </div>
 
+<div class="container py-5">
+<p><?php echo $paragrafoCensurato ?></p>
+<strong>lunghezza paragrafo censurato: <? echo $paragrafoCensuratoLength?></strong>
+</div>
 
 </body>
 
